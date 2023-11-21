@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id = "desktop-nav">
+        <div class = "logo"> Surya Nareshan</div>
+        <div>
+            <ul class = "nav-links">
+                <li><a href="#about"> About</a></li>
+                <li><a href="#experience"> Experience</a></li>
+                <li><a href="#projects"> Projects</a></li>
+                <li><a href="#contacts"> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class = "logo"> Surya Nareshan</div>
+        <div class = "hamburger-menu">
+            <!-- Include Javascript function for menu -->
+            <div class="hamburger-icon" onclick="toggleMenu()"> 
+            <!-- Include 3 span elements (lines of Hambuger menu) -->
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+            <div class = "menu-links"> 
+            <!-- Include toggleMenu() again so that Hamburger menu is closed after clicking link -->
+                <li><a href="#about" onclick="toggleMenu()"> About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()"> Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()"> Projects</a></li>
+                <li><a href="#contacts" onclick="toggleMenu()"> Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id ="profile">
+        <div class = "section__pic-container">
+            <img src="./images/profile-pic.png" alt="Surya Nareshan Profile Pic">
+        </div>
+        <div class="section__text">
+            <p class="section__text_p1">Hello, I'm</p>
+            <h1 class = "title">Surya Nareshan</h1>
+            <p class ="section__text_p2"> Engineering Physics Graduate</p>
+            <div class = "btn-container">
+                <button 
+                    class = "btn btn-color-2" 
+                    onclick = "window.open('./images/suryanareshan_resume.pdf')"
+                >
+                Download CV
+                </button>
+                <button 
+                    class = "btn btn-color-1" 
+                    onclick = "location.href ='./#contact'"
+                >
+                Contact Info
+                </button>
+            </div>
+            <div id = "socials-container">
+                <img 
+                    src="./images/linkedin.png" 
+                    alt="My LinkedIn profile"
+                    class = "icon" 
+                    onclick="location.href='https://www.linkedin.com/in/suryanareshan/'"
+                />
+                <img 
+                    src="./images/github.png" 
+                    alt="My Github profile"
+                    class = "icon" 
+                    onclick="location.href='https://github.com/SuryaNareshan'"
+                />
+            </div>
+        </div>
+    </section>
+    <section id = "about">
+        <p class = "section__text_p1">
+            Get to know more
+        </p>
+        <h1 class = "title">
+            About me
+        </h1>
+        <div class = "section-container">
+            <div class = "section__pic-container">
+                <img src="./images/about-pic.jpg" alt="Profile picture" 
+                     class="about-pic"
+                />
+            </div>
+            <div class = "about-details-container">
+                <div class = "about-container">
+                    <div class="details-container">
+                        <img src="./images/experience.png" 
+                            alt="Experience icon"
+                            class = "icon">
+                            <h3>Experience</h3>
+                            <p>2+ years <br> Embedded Software Developerment</p>
+                    </div>
+                    <div class = "details-container">
+                        <img src="./images/education.png" 
+                            alt="Education icon"
+                            class = "icon">
+                            <h3>Education</h3>
+                            <p>B.Eng Bachelors Degree <br> Carleton University</p>
+                    </div>
+                </div>
+                <div class = "text-container">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore cupiditate nulla saepe voluptates dolorem iusto hic cumque sint molestias rerum facilis quos iure voluptatem totam ea commodi quae ratione, aliquid sunt cum ex perspiciatis esse. Provident iste enim labore nam quidem expedita aperiam corrupti ducimus repellat, harum eveniet, adipisci quasi.</p>
+                </div>    
+            </div>
+        </div>
+        <img src="./images/arrow.png" 
+             alt="Arrow icon"
+             class="icon arrow"
+             onclick="location.href='./#experience'"
+        />
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
+
